@@ -5,20 +5,25 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { WebComponent } from './web.component';
+import { WebRoutingModule } from './web-routing.module';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    WebComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    WebRoutingModule,
   ],
   exports: [
-    DashboardComponent
+    DashboardComponent,
   ]
 })
 export class WebModule { }
