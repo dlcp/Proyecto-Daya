@@ -9,9 +9,13 @@ import { WebComponent } from './web.component';
 const routes: Routes = [
   { path:'dashboard', component:WebComponent,
   children: [
-    { path: '', component: DashboardComponent},
-    { path: 'product', component:ProductComponent},
-    { path: 'category', component:CategoryComponent},
+    { path: '', component: DashboardComponent,
+    children: [
+      { path: 'product', component:ProductComponent},
+      { path: 'category', component:CategoryComponent},
+    ]
+  },
+    
   ]
 },
    //{ path: '**', component:NopagesFoundComponent}
